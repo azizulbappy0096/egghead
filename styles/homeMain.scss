@@ -1,0 +1,41 @@
+.homeMain__jumbotron {
+    background-image: url("/images/image.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .jumbotron__inner {
+        .title {
+            color: #eab308;
+            font-size: 0.6rem;
+        }
+
+        .name {
+            color: #E5E7EB;
+        }
+
+        .summary {
+            font-size: 0.8rem;
+            font-weight: 300;
+            line-height: 1.5rem;
+        }
+    }
+}
+
+// resource
+.d-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .grid-8 {
+        grid-template-columns: repeat(8, minmax(0,1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+

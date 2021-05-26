@@ -1,0 +1,67 @@
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-collapse {
+    .btn {
+        font-size: 0.8rem;
+    }
+}
+
+.navbar-collapse.collapsing ,.navbar-collapse.collapse.show{
+    .btn, .navbar__form {
+        width: fit-content;
+        margin-top: 0.5rem;
+    }
+
+    .navbar__form {
+        margin-top: 1rem;
+    }
+
+    .navbar-nav:first-child  .navbar__button {
+        display: none;
+    }
+
+}
+
+.navbar__form {
+   border: 1px solid rgba(243,244,246,1);
+    .form-control {
+        background-color: rgba(249,250,251,1);
+        border-radius: 6px;
+        padding-left: 2rem;
+        &:focus {
+            border:2px solid rgba(59,130,246,1);
+            
+            box-shadow: none
+        }
+    }
+}
+
+.navbar__button {
+    border: rgba(243,244,246,1);
+    &:hover {
+        background-color: rgba(243,244,246,1);
+    }
+}
+
+.navbar__mode {
+    border: none;
+    background-color: transparent;
+    &:hover {
+        background-color: transparent;
+        border: none;
+    }
+}
+
+
+
+// icons 
+.fa-search {
+    left: 0.5rem;
+    color: #495057;
+}
+
+.fa-bars {
+    color: #000000;
+}
