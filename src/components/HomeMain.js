@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Gallery from "./Gallery";
+import Events from "./Events";
 
 // dummy data
 const resourceData = [
@@ -49,9 +50,10 @@ const RenderResource = ({ data }) => {
         src={data.image}
         alt="Picture of React logo"
         className="align-self-center"
-        height={50}
-        width={50}
-        layout="fixed"
+        
+        height="50"
+        width="50"
+        layout="intrinsic"
       />
       </div>
       <p className="align-self-center text-bold mt-2"> {data.name} </p>
@@ -82,10 +84,10 @@ function HomeMain() {
                 <h6 className="text-uppercase mb-2 title">
                   LISTEN AND RESPOND TO EVENTS
                 </h6>
-                <h2 className="text-capitalize text-white mb-4 display-6">
+                <h2 className="text-capitalize text-white mb-4 display-6 h2">
                   Your Ultimate Guide to Understanding DOM Events
                 </h2>
-                <div className="d-flex align-items-center justify-content-start md:justify-content-center mb-4">
+                <div className="d-flex align-items-center justify-content-md-start justify-content-center mb-4">
                   <Image
                     src="/images/jumbotronAuthor.webp"
                     className="rounded-circle image-fluid"
@@ -106,12 +108,13 @@ function HomeMain() {
         </div>
       </div>
       <Gallery />
-      <div className="container-fluid mt-5">
-        <h2 className="text-center">Browse Curated Developer Resources on the Best Tools</h2>
-        <ul className="list-unstyled d-grid grid-8 grid-4 mt-5">
+      <div className="container-fluid mt-5 pt-4 ">
+        <h3 className="text-center h3">Browse Curated Developer Resources on the Best Tools</h3>
+        <ul className="list-unstyled d-grid grid-col p-3 p-md-5">
             {resourceData.map(data => <RenderResource key={data.id} data={data} />)}
         </ul>
       </div>
+      <Events />
     </main>
   );
 }

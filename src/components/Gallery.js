@@ -3,9 +3,9 @@ import { Card } from "react-bootstrap";
 
 const RenderArticleCard = ({ data }) => {
   return (
-    <Card className={`flex-row p-3 flex-grow-1 ${data.id > 1 && "mt-2"}`}>
-      <Card.Img className="rounded" src={data.image} style={{objectFit: "fill", width: "150px"}} />
-      <Card.Body>
+    <Card className={`flex-md-row p-3 flex-grow-1 align-items-center ${data.id > 1 && "mt-2"}`}>
+      <Card.Img className="rounded" src={data.image} style={{objectFit: "fill",height: "150px", width: "150px"}} />
+      <Card.Body className="text-center text-md-left">
       <Card.Subtitle className="text-capitalize text-muted mt-1" style={{fontSize: "0.7rem", fontWeight: 600}}> {data.subtitle} </Card.Subtitle>
         <Card.Title> {data.title} </Card.Title>
         <Card.Subtitle className="text-muted mt-1" style={{fontSize: "0.7rem", fontWeight: 400}}> {data.author} </Card.Subtitle>
@@ -57,9 +57,9 @@ function Gallery() {
             </Card.Body>
           </Card>
 
-          <Card className="align-items-center mt-2 flex-row flex-grow-1">
+          <Card className="align-items-center mt-2 flex-md-row flex-grow-1">
             <Card.Img src="/images/aws.webp" style={{objectFit: "contain", width: "150px"}} />
-            <Card.Body className="">
+            <Card.Body className="text-center text-md-left">
             <Card.Subtitle className="text-muted text-uppercase" style={{fontSize: "0.7rem", fontWeight: 600}}> Course </Card.Subtitle>
               <Card.Title className="mt-2"> Deploy Ghost to AWS using RDS and EC2 </Card.Title>
               
