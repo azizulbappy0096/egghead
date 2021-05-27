@@ -51,6 +51,7 @@
     height: 100%;
     position: relative;
     overflow: hidden;
+    z-index: 1;
     .card-body {
         
         .h6 {
@@ -64,7 +65,7 @@
 
     .bell {
         background-color: rgba(29,78,216,1);
-        padding: 2px 6px;
+        padding: 4px 6px;
         border: none;
         border-radius: 4px;
         display: inline;
@@ -86,6 +87,7 @@
         background-image: url("/images/playful-eggo.png");
         opacity: 0.2;
         height: 200px;
+        z-index: -1;
     background-position-x: right;
     background-position-y: bottom;
     background-repeat: no-repeat;

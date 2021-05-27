@@ -1,5 +1,6 @@
 // modules
 import Head from 'next/head'
+import Footer from '../src/components/Footer'
 
 // components
 import HomeMain from '../src/components/HomeMain'
@@ -14,7 +15,9 @@ export default function Home() {
       </Head>
 
       <HomeMain />
-      <footer></footer>
+      <footer>
+      <Footer />
+      </footer>
      
     </div>
   )
