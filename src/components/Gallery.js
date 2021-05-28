@@ -1,6 +1,9 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 
+// dummy data
+import { articleCard } from "../shared/data";
+
 const RenderArticleCard = ({ data }) => {
   return (
     <Card
@@ -18,7 +21,12 @@ const RenderArticleCard = ({ data }) => {
           {" "}
           {data.subtitle}{" "}
         </Card.Subtitle>
-        <Card.Title className="mt-1"> <a href="#" className="text-decoration-none">{data.title}</a> </Card.Title>
+        <Card.Title className="mt-1">
+          {" "}
+          <a href="#" className="text-decoration-none">
+            {data.title}
+          </a>{" "}
+        </Card.Title>
         <Card.Subtitle
           className="summary font-weight-normal mt-1"
           style={{ fontSize: "0.7rem", fontWeight: 400 }}
@@ -32,31 +40,6 @@ const RenderArticleCard = ({ data }) => {
 };
 
 function Gallery() {
-  const articleCardData = [
-    {
-      id: 1,
-      title:
-        "How I Built My First SaaS Application with Next.js, Stripe, and Firebase",
-      subtitle: "article",
-      author: "Parker Landon",
-      image: "/images/article1.webp",
-    },
-    {
-      id: 2,
-      title: "Building Offline-First Mobile Applications Using MongoDB Realm",
-      subtitle: "article",
-      author: "Nwani Victory",
-      image: "/images/article2.webp",
-    },
-    {
-      id: 3,
-      title: "Standing Out as A Non-Traditional Applicant",
-      subtitle: "talk",
-      author: "Shaundai Person ・14m",
-      image: "/images/article3.webp",
-    },
-  ];
-
   return (
     <div className="container-fluid mt-2">
       <div className="row">
@@ -65,11 +48,14 @@ function Gallery() {
             <Card.Img
               variant="top"
               src="/images/advanceTs.webp"
-              style={{ objectFit: "contain", width: "200px" }}
+              className="image-lg"
             />
             <Card.Body className="text-center">
               <Card.Title className="">
-               <a href="#" className="text-dark"> Advanced TypeScript Fundamentals</a>
+                <a href="#" className="text-dark">
+                  {" "}
+                  Advanced TypeScript Fundamentals
+                </a>
               </Card.Title>
               <Card.Subtitle
                 className="subtitle mt-1"
@@ -87,10 +73,7 @@ function Gallery() {
           </Card>
 
           <Card className="align-items-center mt-2 flex-sm-row flex-grow-1">
-            <Card.Img
-              src="/images/aws.webp"
-              style={{ objectFit: "contain", width: "150px" }}
-            />
+            <Card.Img src="/images/aws.webp" className="image-md" />
             <Card.Body className="text-center text-sm-left">
               <Card.Subtitle
                 className="subtitle text-uppercase"
@@ -100,8 +83,10 @@ function Gallery() {
                 Course{" "}
               </Card.Subtitle>
               <Card.Title className="mt-2">
-                <a href="#" className="text-decoration-none">{" "}
-                Deploy Ghost to AWS using RDS and EC2{" "}</a>
+                <a href="#" className="text-decoration-none">
+                  {" "}
+                  Deploy Ghost to AWS using RDS and EC2{" "}
+                </a>
               </Card.Title>
 
               <Card.Text className="mt-3 summary">
@@ -112,7 +97,7 @@ function Gallery() {
           </Card>
         </div>
         <div className="col-12 col-md-6 d-flex flex-column">
-          {articleCardData.map((data) => (
+          {articleCard.map((data) => (
             <RenderArticleCard key={data.id} data={data} />
           ))}
         </div>

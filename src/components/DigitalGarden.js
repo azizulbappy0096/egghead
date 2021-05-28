@@ -1,7 +1,10 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+
+// components
 import RenderCard from "./RenderCard";
 
+// dummy data
 const innerCard = [
   {
     title: "Create a Digital Garden CLI with Rust",
@@ -29,14 +32,7 @@ function DigitalGarden() {
       <div className="row">
         <div className="col">
           <Card className="p-4 flex-md-row align-items-center align-items-md-start border-0">
-            <Card.Img
-              src="/images/digitalGarden.webp"
-              className=""
-              style={{
-                height: "250px",
-                width: "250px",
-              }}
-            />
+            <Card.Img src="/images/digitalGarden.webp" className="image-lg" />
             <Card.Body>
               <Card.Subtitle
                 className="text-uppercase subtitle"
@@ -45,7 +41,9 @@ function DigitalGarden() {
                 LEARN IN PUBLIC WITH A DIGITAL GARDEN
               </Card.Subtitle>
               <h2 className="mt-2 h2">
-                Digital Gardening for Developers
+                <a href="#" className="text-decoration-none">
+                  Digital Gardening for Developers
+                </a>
               </h2>
               <Card.Text className="summary">
                 Success in software development requires deeply layered,
@@ -63,7 +61,12 @@ function DigitalGarden() {
               </Card.Text>
               <div className="row">
                 {innerCard.map((data, index) => (
-                  <RenderCard data={data} key={index} col="col-12 col-lg-4" border={true} />
+                  <RenderCard
+                    data={data}
+                    key={index}
+                    col="col-12 col-lg-4"
+                    border={true}
+                  />
                 ))}
               </div>
             </Card.Body>

@@ -1,10 +1,26 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Button, Form, FormControl, Nav, Navbar } from "react-bootstrap";
 import LogoSvg from "../src/components/LogoSvg";
 
-function NavBar({children}) {
+function NavBar({ children }) {
   const navbarCollapse = useRef(null);
   const [isNavCollapse, setIsNavCollapse] = useState(true);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    if (isDark) {
+      document.body.classList.add("dark-mode");
+      document.body.classList.remove("normal-mode");
+      // document.querySelector(".card").
+    } else {
+      document.body.classList.add("normal-mode");
+      document.body.classList.remove("dark-mode");
+    }
+  }, [isDark])
+
+  const switchMode = () => {
+    setIsDark(!isDark);
+  };
 
   const switchNavbarIcon = () => {
     let classes = navbarCollapse.current.classList;
@@ -18,7 +34,13 @@ function NavBar({children}) {
 
   return (
     <>
-      <Navbar collapseOnSelect expand="md" bg="light" className="fixed-top" variant="light">
+      <Navbar
+        collapseOnSelect
+        expand="md"
+        bg={`${isDark ? "" : "light"}`}
+        className="fixed-top"
+        variant={`${isDark ? "" : "light"}`}
+      >
         <Navbar.Brand href="#home">
           {" "}
           <LogoSvg /> <span className="text-dark"> egghead.io </span>{" "}
@@ -63,8 +85,13 @@ function NavBar({children}) {
             >
               Sign in
             </Button>
-            <Button variant="light" className="navbar__mode px-3 py-1">
-              <i class="fas fa-moon"></i>
+            <Button
+              variant="light"
+              className="navbar__mode px-3 py-1"
+              onClick={switchMode}
+            >
+              <i className={`fas fa-moon ${!isDark ? "d-block" : "d-none"}`}></i>
+              <i className={`fas fa-lightbulb ${isDark ? "d-block" : "d-none"}`}></i>
             </Button>
           </Nav>
         </Navbar.Collapse>

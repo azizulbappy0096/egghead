@@ -14,10 +14,15 @@ function RenderTopics({ topics }) {
               <Card.Img
                 src={topic.image}
                 alt={topic.title}
-                style={{ height: 50, width: 50 }}
+                className="image-topics"
               />
               <Card.Body className="py-2">
-                <Card.Title className="custom-h2"><a href="#" className="text-decoration-none"> {topic.title}</a></Card.Title>
+                <Card.Title className="custom-h2">
+                  <a href="#" className="text-decoration-none">
+                    {" "}
+                    {topic.title}
+                  </a>
+                </Card.Title>
                 <Card.Subtitle className="subtitle custom-h3 font-weight-normal">
                   <time> {topic.subtitle} </time>
                 </Card.Subtitle>
@@ -27,7 +32,10 @@ function RenderTopics({ topics }) {
           {!topic.image && (
             <Card.Title className="custom-h2 text-left">
               <span className="mr-2 font-weight-normal"> {index + 1} </span>{" "}
-              <a href="#" className="text-decoration-none"> {topic.title}</a>
+              <a href="#" className="text-decoration-none">
+                {" "}
+                {topic.title}
+              </a>
             </Card.Title>
           )}
         </li>
@@ -48,11 +56,7 @@ function RenderCard({ data, col, direction, text, border }) {
           <Card.Img
             src={data.image}
             alt={data.title}
-            className="align-self-center pt-2"
-            style={{
-              objectFit: "contain",
-              width: "150px",
-            }}
+            className="align-self-center pt-2 rounded image-md"
           />
         )}
         <Card.Body className="w-100">
@@ -68,8 +72,13 @@ function RenderCard({ data, col, direction, text, border }) {
           <Card.Title
             className={`${text ? text : "text-center"} text-capitalize mt-2`}
           >
-            {data.summary ? <a href="#" className="text-decoration-none">{data.title}</a> : data.title}
-            
+            {data.summary ? (
+              <a href="#" className="text-decoration-none">
+                {data.title}
+              </a>
+            ) : (
+              data.title
+            )}
           </Card.Title>
           {data.author && (
             <Card.Subtitle

@@ -5,7 +5,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head />
-        <body>
+        <body className="normal-mode">
           <Main />
           <NextScript />
         </body>

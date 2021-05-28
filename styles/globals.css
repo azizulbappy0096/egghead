@@ -1,11 +1,36 @@
-
 body {
   padding: 0;
   margin: 0;
   padding-top: 3rem;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background-color: rgb(238 240 241);
+}
+
+.dark-mode {
+  background-color: rgba(17, 24, 39, 1);
+  color: white;
+}
+
+.dark-mode .card {
+  background-color: rgba(31, 41, 55, 1) !important;
+}
+
+.dark-mode .card .subtitle {
+  color: #d1d5db;
+}
+
+.dark-mode a:hover {
+  color: rgba(147, 197, 253, 1);
+}
+
+.dark-mode .text-dark,
+.dark-mode a.text-dark:hover,
+.dark-mode a.text-dark:focus {
+  color: white !important;
+}
+
+.normal-mode {
+  background-color: rgb(238 240 241);
 }
 
 a {
@@ -18,22 +43,19 @@ a {
 }
 
 .subtitle {
-  font-size:0.7rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  color: rgba(55,65,81,1);
+  color: rgba(55, 65, 81, 1);
 }
 
 .summary {
-  font-size:0.9rem;
-
+  font-size: 0.9rem;
 }
 
 .custom-h2 {
   font-size: 1rem;
   line-height: inherit;
 }
-
-
 
 @media (max-width: 768px) {
   .h3 {

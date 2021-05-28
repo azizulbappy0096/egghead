@@ -1,109 +1,124 @@
 .homeMain__jumbotron {
-    background-image: url("/images/image.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    .jumbotron__inner {
-        .subtitle {
-            color: #eab308;
-            font-size: 0.6rem;
-        }
-
-        .title {
-            a:hover {
-            color: #eab308 !important;
-            }
-        }
-
-        .name {
-            color: #E5E7EB;
-        }
-
-        .summary {
-            font-size: 0.8rem;
-            font-weight: 300;
-            line-height: 1.5rem;
-        }
+  background-image: url("/images/image.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .jumbotron__inner {
+    .subtitle {
+      color: #eab308;
+      font-size: 0.6rem;
     }
+
+    .title {
+      a:hover {
+        color: #eab308 !important;
+      }
+    }
+
+    .name {
+      color: #e5e7eb;
+    }
+
+    .summary {
+      font-size: 0.8rem;
+      font-weight: 300;
+      line-height: 1.5rem;
+    }
+  }
 }
 
 // resource
 .d-grid {
-    display: grid;
-    gap: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
 }
 
 @media (min-width: 768px) {
-    .grid-col {
-        grid-template-columns: repeat(8, minmax(0,1fr));
-    }
+  .grid-col {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
-    .grid-col {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
+  .grid-col {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 576px) {
-    .grid-col {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+  .grid-col {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 // events
-.events__card {
-    background: #2563eb;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    .card-body {
-        
-        .h6 {
-            color: #bfc5ca !important;
-        }
-
-        .h5 {
-            font-size: 1rem;
-        }
+.events__card,
+.dark-mode .events__card {
+  background: #2563eb !important;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  .card-body {
+    .h6 {
+      color: #bfc5ca !important;
     }
 
-    .bell {
-        background-color: rgba(29,78,216,1);
-        padding: 4px 6px;
-        border: none;
-        border-radius: 4px;
-        display: inline;
-        margin-left: 4px;
-        transition: all 0.25s linear ;
-        i {
-            font-size: 0.7rem;
-            color: white;
-        }
-
-        &:hover {
-            background-color: rgba(30,64,175,1);
-        }
+    .h5 {
+      font-size: 1rem;
     }
-    .background {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        background-image: url("/images/playful-eggo.png");
-        opacity: 0.2;
-        height: 200px;
-        z-index: -1;
+  }
+
+  .bell {
+    background-color: rgba(29, 78, 216, 1);
+    padding: 4px 6px;
+    border: none;
+    border-radius: 4px;
+    display: inline;
+    margin-left: 4px;
+    transition: all 0.25s linear;
+    i {
+      font-size: 0.7rem;
+      color: white;
+    }
+
+    &:hover {
+      background-color: rgba(30, 64, 175, 1);
+    }
+  }
+  .background {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url("/images/playful-eggo.png");
+    opacity: 0.2;
+    height: 200px;
+    z-index: -1;
     background-position-x: right;
     background-position-y: bottom;
     background-repeat: no-repeat;
     background-size: contain;
-    }
+  }
 }
 
 .renderCard {
-    .row > :last-child {
-        flex: 1;
-        max-width: 100%;
-      }
+  .row > :last-child {
+    flex: 1;
+    max-width: 100%;
+  }
+}
+
+.image-lg {
+  object-fit: contain;
+  width: 250px;
+}
+
+.image-md {
+  object-fit: contain;
+  width: 150px;
+}
+
+.image-topics {
+  height: 50px;
+  width: 50px;
 }

@@ -1,26 +1,11 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 
-const talksData = [
-  {
-    id: 1,
-    title: "Concurrent React from Scratch",
-    subtitle: "MENTAL MODELS FOR CONCURRENT REACT",
-    author: "Shawn Wang・36m",
-    summary:
-      "In this talk, we’ll create an effective mental model of Concurrent React by building a tiny clone of React! We will start with a blank JS file and learn about how React renders components, schedules Time-Slicing updates with a Work Loop, and more!",
-    image: "/images/shawn.webp",
-  },
-  {
-    id: 2,
-    title: "Drawing the Invisible: React Explained ",
-    subtitle: "VISUALIZE REACT THROUGH METAPHOR",
-    author: "Maggie Appleton・36m",
-    summary:
-      "A guide to the fundamentals of React explained through five visual metaphors. From component trees to state, Maggie explains the analogies and metaphorical comparisons that helped her 'get' React for the first time.",
-    image: "/images/maggie.webp",
-  },
-];
+// components
+import RenderCard from "./RenderCard";
+
+// dummy data
+import { talksData } from "../shared/data";
 
 const RenderTalks = ({ data }) => {
   return (
@@ -30,17 +15,19 @@ const RenderTalks = ({ data }) => {
           variant="top"
           src={data.image}
           alt={data.author}
-          className="rounded"
-          style={{
-            objectFit: "contain",
-            width: "150px",
-          }}
+          className="rounded image-md"
         />
         <Card.Body className="text-center text-sm-left">
           <Card.Subtitle className="subtitle">
             <span> {data.subtitle} </span>
           </Card.Subtitle>
-          <Card.Title className="mt-2"> <a href="#" className="text-decoration-none"> {data.title}</a></Card.Title>
+          <Card.Title className="mt-2">
+            {" "}
+            <a href="#" className="text-decoration-none">
+              {" "}
+              {data.title}
+            </a>
+          </Card.Title>
           <Card.Subtitle className="subtitle font-weight-normal">
             <span> {data.author} </span>
           </Card.Subtitle>
@@ -67,9 +54,8 @@ function Events() {
             <Card.Img
               className="rounded"
               src="/images/eventVideo.webp"
+              className="image-lg"
               style={{
-                objectFit: "fill",
-                width: "250px",
                 border: "1px solid #f5f0f0",
               }}
             />
@@ -82,7 +68,8 @@ function Events() {
               </Card.Subtitle>
               <Card.Title className="mt-1">
                 <a href="#" className="text-decoration-none">
-                Learning Tips Every Developer Should Know </a>
+                  Learning Tips Every Developer Should Know{" "}
+                </a>
               </Card.Title>
               <Card.Subtitle
                 className="subtitle font-weight-normal mt-1"
@@ -127,7 +114,13 @@ function Events() {
       </div>
       <div className="row mt-4">
         {talksData.map((data) => (
-          <RenderTalks key={data.id} data={data} />
+          <RenderCard
+            key={data.id}
+            data={data}
+            col="col-lg-6"
+            direction="sm-row"
+            text="text-sm-left text-center"
+          />
         ))}
       </div>
     </div>
