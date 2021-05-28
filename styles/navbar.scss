@@ -7,6 +7,10 @@
   border: none;
 }
 
+.dark-mode .navbar-toggler {
+  color: white;
+}
+
 .navbar-collapse {
   .btn {
     font-size: 0.8rem;
@@ -95,6 +99,3 @@
   color: rgba(156, 163, 175, 1);
 }
 
-.fa-bars {
-  color: #000000;
-}
