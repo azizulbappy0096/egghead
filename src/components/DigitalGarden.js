@@ -63,7 +63,7 @@ function DigitalGarden() {
               </Card.Text>
               <div className="row">
                 {innerCard.map((data, index) => (
-                  <RenderCard data={data} key={index} col="col-12 col-md-4" border={true} />
+                  <RenderCard data={data} key={index} col="col-12 col-lg-4" border={true} />
                 ))}
               </div>
             </Card.Body>

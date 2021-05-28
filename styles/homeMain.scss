@@ -4,9 +4,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     .jumbotron__inner {
-        .title {
+        .subtitle {
             color: #eab308;
             font-size: 0.6rem;
+        }
+
+        .title {
+            a:hover {
+            color: #eab308 !important;
+            }
         }
 
         .name {
@@ -93,4 +99,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     }
+}
+
+.renderCard {
+    .row > :last-child {
+        flex: 1;
+        max-width: 100%;
+      }
 }

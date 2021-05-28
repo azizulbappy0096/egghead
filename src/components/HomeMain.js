@@ -147,8 +147,9 @@ const otherResources = {
 const RenderResource = ({ data }) => {
   return (
     <li>
+      <a href="#" className="text-decoration-none">
       <div className="w-full d-flex flex-column align-items-center">
-        <div className="">
+        
           <Image
             src={data.image}
             alt="Picture of React logo"
@@ -157,9 +158,11 @@ const RenderResource = ({ data }) => {
             width="50"
             layout="intrinsic"
           />
-        </div>
+        
         <p className="align-self-center text-bold mt-2"> {data.name} </p>
+        
       </div>
+      </a>
     </li>
   );
 };
@@ -182,11 +185,11 @@ function HomeMain() {
                 />
               </div>
               <div className="jumbotron__inner ml-4 text-center text-md-left">
-                <h6 className="text-uppercase mb-2 title">
+                <h6 className="text-uppercase mb-2 subtitle">
                   LISTEN AND RESPOND TO EVENTS
                 </h6>
-                <h2 className="text-capitalize text-white mb-4 display-6 h2">
-                  Your Ultimate Guide to Understanding DOM Events
+                <h2 className="text-capitalize text-white mb-4 display-6 h2 title">
+                  <a href="#" className="text-decoration-none">Your Ultimate Guide to Understanding DOM Events</a>
                 </h2>
                 <div className="d-flex align-items-center justify-content-md-start justify-content-center mb-3">
                   <Image
@@ -223,7 +226,7 @@ function HomeMain() {
       <CourseAndTopics />
       <StaffPicks />
       <DigitalGarden />
-      <div className="container-fluid mt-5 pt-4">
+      <div className="container-fluid mt-5 pt-4 renderCard">
         <h2 className="h2"> Build a New Portfolio Project </h2>
         <div className="row mt-2">
           {buildPortfolioSection.map((data, index) => (
@@ -237,7 +240,7 @@ function HomeMain() {
           ))}
         </div>
       </div>
-      <div className="container-fluid mt-5 pt-4">
+      <div className="container-fluid mt-5 pt-4 renderCard">
         <div className="row">
           <RenderCard data={otherResources.webSevices} 
           col="col-lg-4"
@@ -250,7 +253,7 @@ function HomeMain() {
           text="left"
           />
           <div className="col-auto">
-              <div className="row">
+              <div className="row h-100">
               {otherResources.extraCard.map((data, index) => (
             <RenderCard
               key={index}

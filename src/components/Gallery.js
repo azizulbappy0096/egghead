@@ -18,7 +18,7 @@ const RenderArticleCard = ({ data }) => {
           {" "}
           {data.subtitle}{" "}
         </Card.Subtitle>
-        <Card.Title className="mt-1"> {data.title} </Card.Title>
+        <Card.Title className="mt-1"> <a href="#" className="text-decoration-none">{data.title}</a> </Card.Title>
         <Card.Subtitle
           className="summary font-weight-normal mt-1"
           style={{ fontSize: "0.7rem", fontWeight: 400 }}
@@ -69,8 +69,7 @@ function Gallery() {
             />
             <Card.Body className="text-center">
               <Card.Title className="">
-                {" "}
-                Advanced TypeScript Fundamentals{" "}
+               <a href="#" className="text-dark"> Advanced TypeScript Fundamentals</a>
               </Card.Title>
               <Card.Subtitle
                 className="subtitle mt-1"
@@ -101,8 +100,8 @@ function Gallery() {
                 Course{" "}
               </Card.Subtitle>
               <Card.Title className="mt-2">
-                {" "}
-                Deploy Ghost to AWS using RDS and EC2{" "}
+                <a href="#" className="text-decoration-none">{" "}
+                Deploy Ghost to AWS using RDS and EC2{" "}</a>
               </Card.Title>
 
               <Card.Text className="mt-3 summary">

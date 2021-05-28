@@ -3,6 +3,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css"
 import "../styles/globals.css";
 import "../styles/navbar.scss";
 import "../styles/homeMain.scss";
+import "../styles/footer.scss";
 
 // navbar
 import NavBar from "../layouts/NavBar";

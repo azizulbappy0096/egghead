@@ -40,7 +40,7 @@ const RenderTalks = ({ data }) => {
           <Card.Subtitle className="subtitle">
             <span> {data.subtitle} </span>
           </Card.Subtitle>
-          <Card.Title className="mt-2">{data.title}</Card.Title>
+          <Card.Title className="mt-2"> <a href="#" className="text-decoration-none"> {data.title}</a></Card.Title>
           <Card.Subtitle className="subtitle font-weight-normal">
             <span> {data.author} </span>
           </Card.Subtitle>
@@ -53,7 +53,7 @@ const RenderTalks = ({ data }) => {
 
 function Events() {
   return (
-    <div className="container-fluid mt-5 pt-4 ">
+    <div className="container-fluid mt-5 pt-4">
       <h2 className="h2">egghead Talks and Events</h2>
       <div className="row mt-4">
         <div className="col-12 col-lg-9 flex-grow-1">
@@ -81,8 +81,8 @@ function Events() {
                 Optimize your Learning
               </Card.Subtitle>
               <Card.Title className="mt-1">
-                {" "}
-                Learning Tips Every Developer Should Know{" "}
+                <a href="#" className="text-decoration-none">
+                Learning Tips Every Developer Should Know </a>
               </Card.Title>
               <Card.Subtitle
                 className="subtitle font-weight-normal mt-1"

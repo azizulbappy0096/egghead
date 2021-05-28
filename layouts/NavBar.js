@@ -18,7 +18,7 @@ function NavBar({children}) {
 
   return (
     <>
-      <Navbar collapseOnSelect expand="md" bg="light" variant="light">
+      <Navbar collapseOnSelect expand="md" bg="light" className="fixed-top" variant="light">
         <Navbar.Brand href="#home">
           {" "}
           <LogoSvg /> <span className="text-dark"> egghead.io </span>{" "}
@@ -63,7 +63,7 @@ function NavBar({children}) {
             >
               Sign in
             </Button>
-            <Button variant="light navbar__mode px-3 py-1">
+            <Button variant="light" className="navbar__mode px-3 py-1">
               <i class="fas fa-moon"></i>
             </Button>
           </Nav>
